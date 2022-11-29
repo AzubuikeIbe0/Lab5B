@@ -4,17 +4,18 @@
 
 class ListOfContacts
 {
-	//friend class NodeOfContacts;
+	friend class NodeOfContacts;
+	friend ostream& operator<<(ostream& str, const ListOfContacts& myList);
 private:
 	NodeOfContacts* head;
 public:
 	ListOfContacts();
 
 	bool insertFront(Contacts);
-	void displayList();
+	void displayList() const;
 	/*ostream& operator<<(ostream& str, const Contacts& myContact);*/
 	Contacts deleteFront();
-	
+
 
 	~ListOfContacts();
 };

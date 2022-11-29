@@ -5,14 +5,24 @@
 int main()
 {
 
+	Contacts C;
+	cout << C;
+
 	ListOfContacts L;
 
-	L.insertFront();
+	L.insertFront(C);
+	L.insertFront(C);
+
 	L.displayList();
+
 	L.deleteFront();
-	//L.operator<<(ostream & str, const ListOfContacts &mList);
+
+	/*cout << L << endl;*/
+
+	L.deleteFront();
+
+	L.displayList();
 
 	L.~ListOfContacts();
-
 	return 0;
 }

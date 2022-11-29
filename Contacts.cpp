@@ -1,6 +1,11 @@
 #include "Contacts.h"
 
+Contacts::Contacts()
+{
+	name = "Johny Walker";
+	number = 386;
 
+}
 
 string Contacts::getName()
 {
@@ -8,9 +13,9 @@ string Contacts::getName()
 }
 
 
-void Contacts::setName()
+void Contacts::setName(string newname)
 {
-	name = "newname";
+	name = newname;
 }
 
 
@@ -20,7 +25,15 @@ int Contacts::getNumber()
 }
 
 
-void Contacts::setNumber()
+void Contacts::setNumber(int no)
 {
-	number = 234;
+	number = no;
+}
+
+ostream& operator<<(ostream& str, const Contacts& myContact)
+{
+	str << myContact.name << " " << myContact.number << endl;
+
+	return str;
+
 }
